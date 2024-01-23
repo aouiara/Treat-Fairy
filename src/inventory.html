@@ -3,8 +3,8 @@
 <head>
   	<meta charset="utf-8">
   	<meta name="viewport" content="initial-scale=1, width=device-width">
-  	<title>Admin Inventory!</title>
-  	<link rel="stylesheet"  href="./inventory.css" />
+  	<title>Admin Inventory</title>
+  	<link rel="stylesheet"  href="style.css" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;800;900&display=swap" />
   	<link rel="icon" href="logo.png">
     <!-- BOOTSTRAP CSS -->
@@ -13,89 +13,114 @@
   	
 </head>
 <body>
-  <div class="desktop-1">
-    <div class="side-menu">
-      <div class="sidenav-bg"></div>
-      	<img class="logo-icon" alt="" src="logo.svg">
-      	<div class="inventory-hl">
-          <img class="icon" alt="" src="package.svg">
-        	<div class="inventory">INVENTORY</div>
-          <div class="active-background"></div>
-      	</div>
-      	<div class="invoice">
-          <img class="icon" alt="" src="file.svg">
-        	<div>INVOICE</div>
-      	</div>
-      	<div class="access-control">
-        	<img class="icon" alt="" src="user-square.svg">
-        	<div>ACCESS CONTROL</div>
-      	</div>
-      	<div class="profile">
-          <img class="icon" alt="" src="user-circle.svg">
-        	<div class="profile1">PROFILE</div>
-      	</div>
-      	<div class="logout">
-        	<img class="icon" alt="" src="logout.svg">
-        	<div class="log-out">Log out</div>
-      	</div>
-    	</div>
-    	<div class="content">
-      	<div class="inventory-title">INVENTORY</div>
-      	<div class="search-by-name-parent">
-        	<div class="search-by-name">
-          	<div class="container">
-            	<div class="control">
-              	<img class="search-icon" alt="" src="search-refraction.svg">
-              	<div class="text">Search by name</div>
-            	</div>
-          	</div>
-        	</div>
-        	<div class="filters-action">
-          	<div class="sorts">
-            	<div class="sort-by-quantity">
-              	<img class="down-icon" alt="" src="down.svg">
-              	<div class="container1">
-                	<div class="control1">
-                  	<img class="icon6" alt="" src="Icon.svg">
-                  	<div class="text1">Sort by Quantity </div>
-                	</div>
-              	</div>
-              		<img class="select-arrow-icon" alt="" src="Select arrow.svg">
-              		<img class="icon-right" alt="" src="Icon right.png">
-              	</div>
-            		<div class="sort-by-quantity">
-              		<img class="down-icon" alt="" src="down.svg">
-              		<div class="container2">
-                		<div class="control1">
-                  		<img class="icon6" alt="" src="Icon.svg">
-                  		<div class="text1">Sort by Earliest Expiry </div>
-                		</div>
-              		</div>
-              		<img class="select-arrow-icon" alt="" src="Select arrow.svg">
-              		<img class="icon-right" alt="" src="Icon right.png">
-              	</div>
-          		</div>
-          		<div class="new-product">
-            	<img class="down-icon" alt="" src="plus.svg">
-            	<div class="container3">
-              	<div class="control3">
-                	<img class="icon6" alt="" src="Icon.svg">
-                	<div class="text3">Add New Product</div>
-              	</div>
-            	</div>
-            	<img class="select-arrow-icon" alt="" src="Select arrow.svg">
-            	<img class="icon-right" alt="" src="Icon right.png">
-            </div>
-        	</div>
-      	</div>
-        <div class="pagination">
-        <img class="right-icon" alt="" src="left.svg">
-        <div class="div20">1</div>
-        <div class="div21">2</div>
-        <div class="div21">3</div>
-        <img class="right-icon1" alt="" src="right.svg">
-      </div>
-    </div>
-  </div>
+  	<div class="inventory">
+		<div class="side-menu">
+			<img class="logo-icon" alt="" src="logo.svg" />
+			<div class="side-header">
+				<button class="inventory1">
+					<img class="package-icon" alt="" src="package.svg" />
+					<div class="inventory2">INVENTORY</div>
+				</button>
+				<div class="invoice">
+					<img class="icon" loading="eager" alt="" src="file.svg" />
+					<div class="invoice1">INVOICE</div>
+				</div>
+				<div class="access">
+					<img class="icon1" loading="eager" alt="" src="user-square.svg" />
+					<div class="access-control">ACCESS CONTROL</div>
+				</div>
+				<div class="profile">
+					<img class="icon2" loading="eager" alt="" src="user-circle.svg" />
+					<div class="profile1">PROFILE</div>
+				</div>
+			</div>
+			<div class="logout">
+				<img class="icon3" alt="" src="logout.svg" />
+				<div class="log-out">Log out</div>
+			</div>
+		</div>
+		<main class="content">
+			<section class="search-by-name">
+				<div class="tools">
+					<h1 class="inventory3">INVENTORY</h1>
+					<div class="search-by-name1">
+						<img class="icon4" alt="" src="search.svg" />
+						<input class="logout-icon" placeholder="Search by name" type="text" />
+					</div>
+					<div class="filters-action">
+						<div class="sorts">
+							<div class="sort-by-quantity">
+								<img class="icon5" alt="" src="down.svg" />
+								<div class="sort-icons">Sort by Quantity</div>
+							</div>
+							<div class="sort-by-ed">
+								<img class="icon6" alt="" src="down.svg" />
+								<div class="text">Sort by Earliest Expiry</div>
+							</div>
+						</div>
+						<div class="new-product">
+							<img class="icon7" alt="" src="plus.svg" />
+							<input class="text1" placeholder="Add New Product" type="text" />
+						</div>
+					</div>
+				</div>
+					<div class="i-d-name-frame">
+						<div class="id">ID</div>
+						<div class="name">Name</div>
+						<div class="expiry-quantity-frame-parent">
+							<div class="expiry-quantity-frame">
+							<div class="earliest-expiry-date">Earliest Expiry Date</div>
+						</div>
+						<div class="expiry-quantity-frame1">
+							<div class="quantity">Quantity</div>
+						</div>
+						<div class="expiry-quantity-frame2">
+							<div class="ws-price">WS Price</div>
+						</div>
+						<div class="rt-price">RT Price</div>
+						<div class="action">Action</div>
+					</div>
+				</div>
+			</section>
+			<div>
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">First</th>
+							<th scope="col">Last</th>
+							<th scope="col">Handle</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+						<th scope="row">1</th>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+						</tr>
+						<tr>
+						<th scope="row">2</th>
+						<td>Jacob</td>
+						<td>Thornton</td>
+						<td>@fat</td>
+						</tr>
+						<tr>
+						<th scope="row">3</th>
+						<td colspan="2">Larry the Bird</td>
+						<td>@twitter</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="pagination">
+				<img class="icon8" loading="eager" alt="" src="left.svg" />
+				<div class="frame-navigation">1</div>
+				<div class="frame-navigation1">2</div>
+				<div class="frame-navigation2">3</div>
+				<img class="icon9" loading="eager" alt="" src="right.svg" />
+			</div>
+		</main>
+  	</div>
 </body>
 </html>
