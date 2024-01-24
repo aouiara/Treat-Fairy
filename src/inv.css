@@ -45,8 +45,8 @@ body {
 
 
 .logo-icon {
-    height: 145px;
-    width: 149px;
+    height: 160px;
+    width: 166px;
     position: relative;
     object-fit: cover;
   }
@@ -194,9 +194,8 @@ body {
     flex-wrap: wrap;
     padding: var(--padding-3xs) 104px;
     box-sizing: border-box;
-    gap: 98.9px;
     min-width: 239px;
-    min-height: 1020px;
+    min-height: 960px;
     max-width: 100%;
     display: flex;
     flex-direction: row;
@@ -464,7 +463,6 @@ body {
     row-gap: 20px;
     max-width: 100%;
   }
-  .i-d-name-frame,
   .search-by-name {
     align-self: stretch;
     display: flex;
@@ -472,13 +470,7 @@ body {
     justify-content: flex-start;
     max-width: 100%;
   }
-  .i-d-name-frame {
-    flex-direction: row;
-    gap: 29px;
-    text-align: center;
-    font-size: var(--font-size-base);
-    color: var(--heading-title-color);
-  }
+ 
   .search-by-name {
     flex-direction: column;
     gap: 78px;
@@ -590,9 +582,7 @@ body {
     .tools {
       gap: 42px;
     }
-    .i-d-name-frame {
-      flex-wrap: wrap;
-    }
+    
     .search-by-name {
       gap: 39px;
     }
