@@ -179,9 +179,11 @@ body {
   margin: 0;
   align-self: stretch;
   position: relative;
-  font-size: inherit;
+  font-size: 50px;
   font-weight: 600;
   font-family: inherit;
+  display: flex;
+  flex-direction: row;
 }
 
 .search-text {
@@ -310,26 +312,23 @@ body {
   font-family: var(--font-roboto);
 }
 
+
 .pagination {
-  width: 194px;
+  min-width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: var(--gap-xl);
-  margin-left: 40%;
 }
 
-/* FRAME */
 
-.frame-navigation {
+.frame-navigation-bold {
   font-weight: 900;
   color: var(--color-black);
 }
-.frame-navigation,
-.frame-navigation1,
-.frame-navigation2 {
+.frame-navigation{
   width: 14px;
   position: relative;
   line-height: 15px;
