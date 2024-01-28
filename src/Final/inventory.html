@@ -57,7 +57,7 @@
 								<div class="sort-text">Sort by Earliest Expiry</div>
 							</button>
 						</div>
-						<button id="pop-up"class="new-product">
+						<button id="add-pop-up"class="new-product">
 							<img class="plus-icon" src="plus.svg"/>
 							<div class="sort-text">Add New Product</div>
                         </button>
@@ -103,7 +103,7 @@
                             <td>64.00</td>
                             <td>75.00</td>
                             <td colspan="2">
-                                <a>
+                                <a id="edit-pop-up">
                                 <img class="action-icons" src="pencil.svg"/>
                                 </a>
                                 <a>
@@ -142,47 +142,89 @@
   <div class="inventory-add-item">
     <form class="add-product-pop-up">
         <h1 class="add-new-product">Add New Product</h1>
-        <div class="input">
-            <div class="input-form-title">Gummy Worms</div>
+        <div class="input-form">
+            <input class="input-text" placeholder="Gummy Worms" type="text" />
             <div class="form-title">Product name</div>
             <div class="input-text-fields">11/60</div>
         </div>
-        <div class="input1">
-            <input class="text" placeholder="01/01/2025" type="text" />
-            <div class="form-title1">Earliest Expiration Date</div>
+        <div class="input-form">
+            <input class="input-text" placeholder="MM/DD/YYYY" type="text" />
+            <div class="form-title">Earliest Expiration Date</div>
         </div>
-        <div class="input2">
-            <input class="text1" placeholder="100" type="text" />
-            <div class="form-title2">Quantity</div>
+        <div class="input-form">
+            <input class="input-text" placeholder="0" type="text" />
+            <div class="form-title">Quantity</div>
         </div>
-        <div class="input3">
-            <input class="text2" placeholder="34.33" type="text" />
-            <div class="form-title3">Wholesale Price</div>
+        <div class="input-form">
+            <input class="input-text" placeholder="0" type="text" />
+            <div class="form-title">Wholesale Price</div>
         </div>
-        <div class="input4">
-            <input class="text3" placeholder="40.00" type="text" />
-            <div class="form-title4">Retail Price</div>
+        <div class="input-form">
+            <input class="input-text" placeholder="0" type="text" />
+            <div class="form-title">Retail Price</div>
         </div>
-        <div class="cancel-icon-frame">
+        <div class="cancel-add-button">
             <button class="cancel">
-                <img class="x-icon" alt="" src="src/x.svg" />
+                <img class="form-icon" alt="" src="x.svg" />
                 <div class="text-label">Cancel</div>
             </button>
             <button class="add-product">
-                <img class="plus-icon" alt="" src="src/plus.svg" />
-                <div class="text4">Add Product</div>
+                <img class="form-icon" alt="" src="plus.svg" />
+                <div class="text-label">Add Product</div>
             </button>
         </div>
     </form>
 </div>
+<div class="inventory-edit-item">
+  <form class="edit-product-pop-up">
+      <h1 class="add-new-product">Edit Product Information</h1>
+      <div class="input-form">
+          <input class="input-text" placeholder="Product Name" type="text" />
+          <div class="form-title">Product name</div>
+          <div class="input-text-fields">11/60</div>
+      </div>
+      <div class="input-form">
+          <input class="input-text" placeholder="MM/DD/YYYY" type="text" />
+          <div class="form-title">Earliest Expiration Date</div>
+      </div>
+      <div class="input-form">
+          <input class="input-text" placeholder="0" type="text" />
+          <div class="form-title">Quantity</div>
+      </div>
+      <div class="input-form">
+          <input class="input-text" placeholder="0" type="text" />
+          <div class="form-title">Wholesale Price</div>
+      </div>
+      <div class="input-form">
+          <input class="input-text" placeholder="0" type="text" />
+          <div class="form-title">Retail Price</div>
+          <div class="logs-data">Created by: Admin 1 | December 29, 2023 at 9:00AM</div>
+          <div class="logs-data">Last update: Admin 1 | January 1, 2024 at 12:25 AM</div>
+    
+      </div>
+      <div class="cancel-add-button">
+          <button class="cancel">
+              <img class="form-icon" alt="" src="x.svg" />
+              <div class="text-label">Cancel</div>
+          </button>
+          <button class="add-product">
+              <img class="form-icon" alt="" src="plus.svg" />
+              <div class="text-label">Add Product</div>
+          </button>
+      </div>
+  </form>
+</div>
 <script>
-    document.querySelector("#pop-up").addEventListener
-    ("click",function(){document.body.classList.add("active-inventory-add-item");
-});
+    /** ADD FUNCTION POP UP **/
+    document.querySelector("#add-pop-up").addEventListener
+    ("click",function(){document.body.classList.add("active-inventory-add-item");});
     document.querySelector(".inventory-add-item .cancel").addEventListener
-    ("click",function(){document.body.classList.remove("active-inventory-add-item");
-});
+    ("click",function(){document.body.classList.remove("active-inventory-add-item");});
+    /** EDIT FUNCTION POP UP **/
+    document.querySelector("#edit-pop-up").addEventListener
+    ("click",function(){document.body.classList.add("active-inventory-edit-item");});
+    document.querySelector(".inventory-edit-item .cancel").addEventListener
+    ("click",function(){document.body.classList.remove("active-inventory-edit-item");});
 </script>
 </body>
 </html>
-
