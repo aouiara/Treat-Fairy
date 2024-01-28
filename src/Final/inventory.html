@@ -41,7 +41,7 @@
 		<main class="content">
 			<section class="tools">
 				<div class="tools">
-          <h1 class="page-title">INVENTORY</h1>
+                    <h1 class="page-title">INVENTORY</h1>
 					<div class="search-by-name">
 						<img class="search-icon" src="search.svg"/>
 						<input class="search-text" placeholder="Search by name" type="text" />
@@ -57,88 +57,132 @@
 								<div class="sort-text">Sort by Earliest Expiry</div>
 							</button>
 						</div>
-						<button class="new-product">
+						<button id="pop-up"class="new-product">
 							<img class="plus-icon" src="plus.svg"/>
 							<div class="sort-text">Add New Product</div>
-            </button>
+                        </button>
 					</div>
 				</div>
 			</section>
-      <br>
-      <div>
-        <table class="table table-hover">
-          <thead>
-              <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Earliest Expiry Date</th>
-                  <th scope="col">Quantity</th>
-                  <th scope="col">WS Price</th>
-                  <th scope="col">RT Price</th>
-                  <th scope="col">Action</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-              <th scope="row">1</th>
-              <td>Belgian Heart Box</td>
-              <td>February 23, 2024</td>
-              <td>100</td>
-              <td>109.00</td>
-              <td>135.00</td>
-              <td colspan="2">
-                <a>
-                  <img class="action-icons" src="pencil.svg"/>
-                </a>
-                <a>
-                <img class="action-icons" src="trash.svg"/>
-                </a>
-              </td>
-              </tr>
-              <tr>
-              <th scope="row">2</th>
-              <td>Adora Nuts Crisp Small (250g)</td>
-              <td>June 18, 2025</td>
-              <td>65</td>
-              <td>64.00</td>
-              <td>75.00</td>
-              <td colspan="2">
-                <a>
-                  <img class="action-icons" src="pencil.svg"/>
-                </a>
-                <a>
-                <img class="action-icons" src="trash.svg"/>
-                </a>
-              </td>
-              </tr>
-              <tr>
-              <th scope="row">3</th>
-              <td>Hershey's Heath XL</td>
-              <td>June 24, 2024</td>
-              <td>74</td>
-              <td>114.00</td>
-              <td>129.00</td>
-              <td colspan="2">
-                <a>
-                  <img class="action-icons" src="pencil.svg"/>
-                </a>
-                <a>
-                <img class="action-icons" src="trash.svg"/>
-                </a>
-              </td>
-              </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="pagination">
-        <img class="icon-pagination" loading="eager" alt="" src="left.svg" />
-        <div class="frame-navigation-bold">1</div>
-        <div class="frame-navigation">2</div>
-        <div class="frame-navigation">3</div>
-        <img class="icon-pagination" loading="eager" alt="" src="right.svg" />
-      </div>
+            <br>
+            <div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Earliest Expiry Date</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">WS Price</th>
+                            <th scope="col">RT Price</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Belgian Heart Box</td>
+                            <td>February 23, 2024</td>
+                            <td>100</td>
+                            <td>109.00</td>
+                            <td>135.00</td>
+                            <td colspan="2">
+                                <a>
+                                    <img class="action-icons" src="pencil.svg"/>
+                                </a>
+                                <a>
+                                    <img class="action-icons" src="trash.svg"/>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Adora Nuts Crisp Small (250g)</td>
+                            <td>June 18, 2025</td>
+                            <td>65</td>
+                            <td>64.00</td>
+                            <td>75.00</td>
+                            <td colspan="2">
+                                <a>
+                                <img class="action-icons" src="pencil.svg"/>
+                                </a>
+                                <a>
+                                <img class="action-icons" src="trash.svg"/>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Hershey's Heath XL</td>
+                            <td>June 24, 2024</td>
+                            <td>74</td>
+                            <td>114.00</td>
+                            <td>129.00</td>
+                            <td colspan="2">
+                                <a>
+                                <img class="action-icons" src="pencil.svg"/>
+                                </a>
+                                <a>
+                                <img class="action-icons" src="trash.svg"/>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagination">
+                <img class="icon-pagination" loading="eager" alt="" src="left.svg" />
+                <div class="frame-navigation-bold">1</div>
+                <div class="frame-navigation">2</div>
+                <div class="frame-navigation">3</div>
+                <img class="icon-pagination" loading="eager" alt="" src="right.svg" />
+            </div>
 		</main>
   </div>
+  <div class="inventory-add-item">
+    <form class="add-product-pop-up">
+        <h1 class="add-new-product">Add New Product</h1>
+        <div class="input">
+            <div class="input-form-title">Gummy Worms</div>
+            <div class="form-title">Product name</div>
+            <div class="input-text-fields">11/60</div>
+        </div>
+        <div class="input1">
+            <input class="text" placeholder="01/01/2025" type="text" />
+            <div class="form-title1">Earliest Expiration Date</div>
+        </div>
+        <div class="input2">
+            <input class="text1" placeholder="100" type="text" />
+            <div class="form-title2">Quantity</div>
+        </div>
+        <div class="input3">
+            <input class="text2" placeholder="34.33" type="text" />
+            <div class="form-title3">Wholesale Price</div>
+        </div>
+        <div class="input4">
+            <input class="text3" placeholder="40.00" type="text" />
+            <div class="form-title4">Retail Price</div>
+        </div>
+        <div class="cancel-icon-frame">
+            <button class="cancel">
+                <img class="x-icon" alt="" src="src/x.svg" />
+                <div class="text-label">Cancel</div>
+            </button>
+            <button class="add-product">
+                <img class="plus-icon" alt="" src="src/plus.svg" />
+                <div class="text4">Add Product</div>
+            </button>
+        </div>
+    </form>
+</div>
+<script>
+    document.querySelector("#pop-up").addEventListener
+    ("click",function(){document.body.classList.add("active-inventory-add-item");
+});
+    document.querySelector(".inventory-add-item .cancel").addEventListener
+    ("click",function(){document.body.classList.remove("active-inventory-add-item");
+});
+</script>
 </body>
 </html>
 
