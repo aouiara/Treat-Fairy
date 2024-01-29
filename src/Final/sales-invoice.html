@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	<title>Admin Inventory</title>
+  	<link rel="stylesheet"  href="style.css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;800;900&display=swap" />
+  	<link rel="icon" href="logo.png">
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<body>
+  <div class="sales-invoice">
+
+        <!-- SIDE NAVIGATION -->
+
+		<div class="side-menu">
+			<img class="logo-icon" alt="" src="logo.svg" />
+			<div class="side-header">
+				<div class="side-options">
+					<img class="side-icon" src="package.svg"/>
+					<div class="side-text">INVENTORY</div>
+                </div>
+				<button id="open-invoice" class="side-buttons">
+                    <img class="side-icon" src="file.svg"/>
+					<div class="side-text">SALES INVOICE</div>
+                </button>
+				<div id="open-access" class="side-options">
+					<img class="side-icon" src="folder-shield.svg"/>
+					<div class="side-text">ACCESS CONTROL</div>
+				</div>
+				<div id="open-profile" class="side-options">
+					<img class="side-icon" src="user-circle.svg"/>
+					<div class="side-text">PROFILE</div>
+				</div>
+			</div>
+			<button class="logout">
+				<img class="side-icon" src="logout.svg"/>
+				<div class="side-text">Log out</div>
+            </button>
+		</div>
+
+        <!-- MAIN CONTENT -->
+
+            <main class="content">
+                <section class="tools">
+                    <div class="tools">
+                        <h1 class="page-title">SALES INVOICE</h1>
+                        <div class="search-by-name">
+                            <img class="search-icon" src="search.svg"/>
+                            <input class="search-text" placeholder="Search by name" type="text" />
+                        </div>
+                        <div class="filters-action">
+                            <div class="sorts">
+                                <button class="sort-by">
+                                    <img class="down-icon" src="down.svg"/>
+                                    <div class="sort-text">Sort by Date</div>
+                                </button>
+                                <button class="sort-by">
+                                    <img class="down-icon" src="down.svg"/>
+                                    <div class="sort-text">Sort by Total</div>
+                                </button>
+                            </div>
+                            <button id="add-pop-up"class="new-product">
+                                <img class="plus-icon" src="plus.svg"/>
+                                <div class="sort-text">Add New Invoice</div>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <br>
+
+                <!-- TABLE -->
+
+                <div>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Sold Date</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Amount Paid</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">00128</th>
+                                <td>Simplus Philippines</td>
+                                <td>December 15, 2023</td>
+                                <td>17,550.00</td>
+                                <td>8,775.00</td>
+                                <td colspan="3">
+                                    <a>
+                                        <img class="action-icons" src="pencil.svg"/>
+                                    </a>
+                                    <a>
+                                        <img class="action-icons" src="share.svg"/>
+                                    </a>
+                                    <a>
+                                        <img class="action-icons" src="trash.svg"/>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">00129</th>
+                                <td>Simplus Philippines</td>
+                                <td>December 16, 2023</td>
+                                <td>17,550.00</td>
+                                <td>8,775.00</td>
+                                <td colspan="3">
+                                    <a id="edit-pop-up">
+                                    <img class="action-icons" src="pencil.svg"/>
+                                    </a>
+                                    <a>
+                                        <img class="action-icons" src="share.svg"/>
+                                    </a>
+                                    <a>
+                                    <img class="action-icons" src="trash.svg"/>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">00130</th>
+                                <td>Simplus Philippines</td>
+                                <td>December 17, 2023</td>
+                                <td>17,550.00</td>
+                                <td>8,775.00</td>
+                                <td colspan="3">
+                                    <a>
+                                    <img class="action-icons" src="pencil.svg"/>
+                                    </a>
+                                    <a>
+                                        <img class="action-icons" src="share.svg"/>
+                                    </a>
+                                    <a>
+                                    <img class="action-icons" src="trash.svg"/>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <img class="icon-pagination" loading="eager" alt="" src="left.svg" />
+                    <div class="frame-navigation-bold">1</div>
+                    <div class="frame-navigation">2</div>
+                    <div class="frame-navigation">3</div>
+                    <img class="icon-pagination" loading="eager" alt="" src="right.svg" />
+                </div>
+            </main>
+    </div>
+
+    <!-- ADD -->
+
+    <div class="sales-invoice-add-item">
+        <form class="add-invoice-pop-up">
+            <h1 class="add-new-invoice">Create New Invoice</h1>
+            
+            <div class="form-division">
+                <div class="input-form-invoice">
+                    <input class="input-text-invoice" placeholder="Name" type="text" />
+                    <div class="form-title">Sold to:</div>
+                    <div class="input-text-fields">0/70</div>
+                </div>
+                <div class="input-form-invoice">
+                    <input class="input-text-invoice" placeholder="MM/DD/YYYY" type="date" />
+                    <div class="form-title">Sold Date</div>
+                </div>
+            </div>
+            <div class="form-division">
+                <div class="input-form-invoice">
+                    <input class="input-text-invoice" placeholder="0" type="text" />
+                    <div class="form-title">Client TIN:</div>
+                    <div class="input-text-fields">0/12</div>
+                </div>
+                <div class="input-form-invoice">
+                    <input class="input-text-invoice" placeholder="" type="text" />
+                    <div class="form-title">Issued by</div>
+                    <div class="input-text-fields">0/70</div>
+                </div>
+            </div>
+            <div class="form-division">
+                <div class="input-form-invoice">
+                    <input class="input-text-invoice" placeholder="Business Style" type="text" />
+                    <div class="form-title">Business Style</div>
+                    <div class="input-text-fields">0/70</div>
+                </div>
+                <div class="input-form-invoice">
+                    <input class="input-text-invoice" placeholder="0" type="number" />
+                    <div class="form-title">Amount Paid</div>
+                </div>
+            </div>
+            
+            <div class="input-form">
+                <input class="input-text-invoice" placeholder="0" type="text" />
+                <div class="form-title">Client Address</div>
+                <div class="input-text-fields">0/140</div>
+            </div>
+
+            <h2 class="items-text">Items</h2>
+            <button class="add-item">
+                <img class="form-icon" alt="" src="plus.svg" />
+                <div class="text-label">Add Item</div>
+            </button>
+            <div class="form-division">
+                <div class="input-form-invoice">
+                    <input class="input-text-invoice" placeholder="Business Style" type="text" />
+                    <div class="form-title">Item Name</div>
+                    <div class="input-text-fields">0/60</div>
+                </div>
+                <div class="input-form-invoice-quantity">
+                    <input class="input-text-invoice" placeholder="0" type="number" />
+                    <div class="form-title">Quantity</div>
+                </div>
+                <div class="input-form-invoice-unit-price">
+                    <input class="input-text-invoice" placeholder="0" type="number" />
+                    <div class="form-title">Unit Price</div>
+                </div>
+            </div>
+
+            <div class="cancel-add-button">
+                <button class="cancel">
+                    <img class="form-icon" alt="" src="x.svg" />
+                    <div class="text-label">Cancel</div>
+                </button>
+                <button class="add-product">
+                    <img class="form-icon" alt="" src="plus.svg" />
+                    <div class="text-label">Add Invoice</div>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- EDIT -->
+
+    <div class="inventory-edit-item">
+        <form class="edit-product-pop-up">
+            <h1 class="add-new-product">Edit Product Information</h1>
+            <div class="input-form">
+                <input class="input-text" placeholder="Product Name" type="text" />
+                <div class="form-title">Product name</div>
+                <div class="input-text-fields">11/60</div>
+            </div>
+            <div class="input-form">
+                <input class="input-text" placeholder="MM/DD/YYYY" type="text" />
+                <div class="form-title">Earliest Expiration Date</div>
+            </div>
+            <div class="input-form">
+                <input class="input-text" placeholder="0" type="text" />
+                <div class="form-title">Quantity</div>
+            </div>
+            <div class="input-form">
+                <input class="input-text" placeholder="0" type="text" />
+                <div class="form-title">Wholesale Price</div>
+            </div>
+            <div class="input-form">
+                <input class="input-text" placeholder="0" type="text" />
+                <div class="form-title">Retail Price</div>
+                <div class="logs-data">Created by: Admin 1 | December 29, 2023 at 9:00AM</div>
+                <div class="logs-data">Last update: Admin 1 | January 1, 2024 at 12:25 AM</div>
+            
+            </div>
+            <div class="cancel-add-button">
+                <button class="cancel">
+                    <img class="form-icon" alt="" src="x.svg" />
+                    <div class="text-label">Cancel</div>
+                </button>
+                <button class="save-product">
+                    <img class="form-icon" alt="" src="check.svg" />
+                    <div class="text-label">Save Changes</div>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- JAVASCRIPT FOR POP UPS -->
+
+    <script>
+        /** ADD FUNCTION POP UP **/
+        document.querySelector("#add-pop-up").addEventListener
+        ("click",function(){document.body.classList.add("active-sales-invoice-add-item");});
+        document.querySelector(".sales-invoice-add-item .cancel").addEventListener
+        ("click",function(){document.body.classList.remove("active-sales-invoice-add-item");});
+        /** EDIT FUNCTION POP UP **/
+        document.querySelector("#edit-pop-up").addEventListener
+        ("click",function(){document.body.classList.add("active-inventory-edit-item");});
+        document.querySelector(".inventory-edit-item .cancel").addEventListener
+        ("click",function(){document.body.classList.remove("active-inventory-edit-item");});
+    </script>
+
+</body>
+</html>
