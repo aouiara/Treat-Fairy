@@ -13,6 +13,9 @@
 </head>
 <body>
   <div class="inventory">
+
+        <!-- SIDE NAVIGATION -->
+
 		<div class="side-menu">
 			<img class="logo-icon" alt="" src="logo.svg" />
 			<div class="side-header">
@@ -20,15 +23,15 @@
 					<img class="side-icon" src="package.svg"/>
 					<div class="side-text">INVENTORY</div>
 				</button>
-				<div class="side-options">
-          <img class="side-icon" src="file.svg"/>
+				<div id="open-invoice" class="side-options">
+                    <img class="side-icon" src="file.svg"/>
 					<div class="side-text">SALES INVOICE</div>
-				</div>
-				<div class="side-options">
+                </div>
+				<div id="open-access" class="side-options">
 					<img class="side-icon" src="folder-shield.svg"/>
 					<div class="side-text">ACCESS CONTROL</div>
 				</div>
-				<div class="side-options">
+				<div id="open-profile" class="side-options">
 					<img class="side-icon" src="user-circle.svg"/>
 					<div class="side-text">PROFILE</div>
 				</div>
@@ -36,195 +39,214 @@
 			<button class="logout">
 				<img class="side-icon" src="logout.svg"/>
 				<div class="side-text">Log out</div>
-      </button>
+            </button>
 		</div>
-		<main class="content">
-			<section class="tools">
-				<div class="tools">
-                    <h1 class="page-title">INVENTORY</h1>
-					<div class="search-by-name">
-						<img class="search-icon" src="search.svg"/>
-						<input class="search-text" placeholder="Search by name" type="text" />
-					</div>
-					<div class="filters-action">
-						<div class="sorts">
-							<button class="sort-by">
-								<img class="down-icon" src="down.svg"/>
-								<div class="sort-text">Sort by Quantity</div>
-							</button>
-							<button class="sort-by">
-								<img class="down-icon" src="down.svg"/>
-								<div class="sort-text">Sort by Earliest Expiry</div>
-							</button>
-						</div>
-						<button id="add-pop-up"class="new-product">
-							<img class="plus-icon" src="plus.svg"/>
-							<div class="sort-text">Add New Product</div>
-                        </button>
-					</div>
-				</div>
-			</section>
-            <br>
-            <div>
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Earliest Expiry Date</th>
-                            <th scope="col">Quantity</th>
-                            <th scope="col">WS Price</th>
-                            <th scope="col">RT Price</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Belgian Heart Box</td>
-                            <td>February 23, 2024</td>
-                            <td>100</td>
-                            <td>109.00</td>
-                            <td>135.00</td>
-                            <td colspan="2">
-                                <a>
+
+        <!-- MAIN CONTENT -->
+
+            <main class="content">
+                <section class="tools">
+                    <div class="tools">
+                        <h1 class="page-title">INVENTORY</h1>
+                        <div class="search-by-name">
+                            <img class="search-icon" src="search.svg"/>
+                            <input class="search-text" placeholder="Search by name" type="text" />
+                        </div>
+                        <div class="filters-action">
+                            <div class="sorts">
+                                <button class="sort-by">
+                                    <img class="down-icon" src="down.svg"/>
+                                    <div class="sort-text">Sort by Quantity</div>
+                                </button>
+                                <button class="sort-by">
+                                    <img class="down-icon" src="down.svg"/>
+                                    <div class="sort-text">Sort by Earliest Expiry</div>
+                                </button>
+                            </div>
+                            <button id="add-pop-up"class="new-product">
+                                <img class="plus-icon" src="plus.svg"/>
+                                <div class="sort-text">Add New Product</div>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <br>
+
+                <!-- TABLE -->
+
+                <div>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Earliest Expiry Date</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">WS Price</th>
+                                <th scope="col">RT Price</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Belgian Heart Box</td>
+                                <td>February 23, 2024</td>
+                                <td>100</td>
+                                <td>109.00</td>
+                                <td>135.00</td>
+                                <td colspan="2">
+                                    <a>
+                                        <img class="action-icons" src="pencil.svg"/>
+                                    </a>
+                                    <a>
+                                        <img class="action-icons" src="trash.svg"/>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Adora Nuts Crisp Small (250g)</td>
+                                <td>June 18, 2025</td>
+                                <td>65</td>
+                                <td>64.00</td>
+                                <td>75.00</td>
+                                <td colspan="2">
+                                    <a id="edit-pop-up">
                                     <img class="action-icons" src="pencil.svg"/>
-                                </a>
-                                <a>
+                                    </a>
+                                    <a>
                                     <img class="action-icons" src="trash.svg"/>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Adora Nuts Crisp Small (250g)</td>
-                            <td>June 18, 2025</td>
-                            <td>65</td>
-                            <td>64.00</td>
-                            <td>75.00</td>
-                            <td colspan="2">
-                                <a id="edit-pop-up">
-                                <img class="action-icons" src="pencil.svg"/>
-                                </a>
-                                <a>
-                                <img class="action-icons" src="trash.svg"/>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Hershey's Heath XL</td>
-                            <td>June 24, 2024</td>
-                            <td>74</td>
-                            <td>114.00</td>
-                            <td>129.00</td>
-                            <td colspan="2">
-                                <a>
-                                <img class="action-icons" src="pencil.svg"/>
-                                </a>
-                                <a>
-                                <img class="action-icons" src="trash.svg"/>
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Hershey's Heath XL</td>
+                                <td>June 24, 2024</td>
+                                <td>74</td>
+                                <td>114.00</td>
+                                <td>129.00</td>
+                                <td colspan="2">
+                                    <a>
+                                    <img class="action-icons" src="pencil.svg"/>
+                                    </a>
+                                    <a>
+                                    <img class="action-icons" src="trash.svg"/>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <img class="icon-pagination" loading="eager" alt="" src="left.svg" />
+                    <div class="frame-navigation-bold">1</div>
+                    <div class="frame-navigation">2</div>
+                    <div class="frame-navigation">3</div>
+                    <img class="icon-pagination" loading="eager" alt="" src="right.svg" />
+                </div>
+            </main>
+    </div>
+
+    <!-- ADD -->
+
+    <div class="inventory-add-item">
+        <form class="add-product-pop-up">
+            <h1 class="add-new-product">Add New Product</h1>
+            <div class="input-form">
+                <input class="input-text" placeholder="Gummy Worms" type="text" />
+                <div class="form-title">Product name</div>
+                <div class="input-text-fields">11/60</div>
             </div>
-            <div class="pagination">
-                <img class="icon-pagination" loading="eager" alt="" src="left.svg" />
-                <div class="frame-navigation-bold">1</div>
-                <div class="frame-navigation">2</div>
-                <div class="frame-navigation">3</div>
-                <img class="icon-pagination" loading="eager" alt="" src="right.svg" />
+            <div class="input-form">
+                <input class="input-text" placeholder="MM/DD/YYYY" type="text" />
+                <div class="form-title">Earliest Expiration Date</div>
             </div>
-		</main>
-  </div>
-  <div class="inventory-add-item">
-    <form class="add-product-pop-up">
-        <h1 class="add-new-product">Add New Product</h1>
-        <div class="input-form">
-            <input class="input-text" placeholder="Gummy Worms" type="text" />
-            <div class="form-title">Product name</div>
-            <div class="input-text-fields">11/60</div>
-        </div>
-        <div class="input-form">
-            <input class="input-text" placeholder="MM/DD/YYYY" type="text" />
-            <div class="form-title">Earliest Expiration Date</div>
-        </div>
-        <div class="input-form">
-            <input class="input-text" placeholder="0" type="text" />
-            <div class="form-title">Quantity</div>
-        </div>
-        <div class="input-form">
-            <input class="input-text" placeholder="0" type="text" />
-            <div class="form-title">Wholesale Price</div>
-        </div>
-        <div class="input-form">
-            <input class="input-text" placeholder="0" type="text" />
-            <div class="form-title">Retail Price</div>
-        </div>
-        <div class="cancel-add-button">
-            <button class="cancel">
-                <img class="form-icon" alt="" src="x.svg" />
-                <div class="text-label">Cancel</div>
-            </button>
-            <button class="add-product">
-                <img class="form-icon" alt="" src="plus.svg" />
-                <div class="text-label">Add Product</div>
-            </button>
-        </div>
-    </form>
-</div>
-<div class="inventory-edit-item">
-  <form class="edit-product-pop-up">
-      <h1 class="add-new-product">Edit Product Information</h1>
-      <div class="input-form">
-          <input class="input-text" placeholder="Product Name" type="text" />
-          <div class="form-title">Product name</div>
-          <div class="input-text-fields">11/60</div>
-      </div>
-      <div class="input-form">
-          <input class="input-text" placeholder="MM/DD/YYYY" type="text" />
-          <div class="form-title">Earliest Expiration Date</div>
-      </div>
-      <div class="input-form">
-          <input class="input-text" placeholder="0" type="text" />
-          <div class="form-title">Quantity</div>
-      </div>
-      <div class="input-form">
-          <input class="input-text" placeholder="0" type="text" />
-          <div class="form-title">Wholesale Price</div>
-      </div>
-      <div class="input-form">
-          <input class="input-text" placeholder="0" type="text" />
-          <div class="form-title">Retail Price</div>
-          <div class="logs-data">Created by: Admin 1 | December 29, 2023 at 9:00AM</div>
-          <div class="logs-data">Last update: Admin 1 | January 1, 2024 at 12:25 AM</div>
-    
-      </div>
-      <div class="cancel-add-button">
-          <button class="cancel">
-              <img class="form-icon" alt="" src="x.svg" />
-              <div class="text-label">Cancel</div>
-          </button>
-          <button class="save-product">
-              <img class="form-icon" alt="" src="check.svg" />
-              <div class="text-label">Save Changes</div>
-          </button>
-      </div>
-  </form>
-</div>
-<script>
-    /** ADD FUNCTION POP UP **/
-    document.querySelector("#add-pop-up").addEventListener
-    ("click",function(){document.body.classList.add("active-inventory-add-item");});
-    document.querySelector(".inventory-add-item .cancel").addEventListener
-    ("click",function(){document.body.classList.remove("active-inventory-add-item");});
-    /** EDIT FUNCTION POP UP **/
-    document.querySelector("#edit-pop-up").addEventListener
-    ("click",function(){document.body.classList.add("active-inventory-edit-item");});
-    document.querySelector(".inventory-edit-item .cancel").addEventListener
-    ("click",function(){document.body.classList.remove("active-inventory-edit-item");});
-</script>
+            <div class="input-form">
+                <input class="input-text" placeholder="0" type="text" />
+                <div class="form-title">Quantity</div>
+            </div>
+            <div class="input-form">
+                <input class="input-text" placeholder="0" type="text" />
+                <div class="form-title">Wholesale Price</div>
+            </div>
+            <div class="input-form">
+                <input class="input-text" placeholder="0" type="text" />
+                <div class="form-title">Retail Price</div>
+            </div>
+            <div class="cancel-add-button">
+                <button class="cancel">
+                    <img class="form-icon" alt="" src="x.svg" />
+                    <div class="text-label">Cancel</div>
+                </button>
+                <button class="add-product">
+                    <img class="form-icon" alt="" src="plus.svg" />
+                    <div class="text-label">Add Product</div>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- EDIT -->
+
+    <div class="inventory-edit-item">
+        <form class="edit-product-pop-up">
+            <h1 class="add-new-product">Edit Product Information</h1>
+            <div class="input-form">
+                <input class="input-text" placeholder="Product Name" type="text" />
+                <div class="form-title">Product name</div>
+                <div class="input-text-fields">11/60</div>
+            </div>
+            <div class="input-form">
+                <input class="input-text" placeholder="MM/DD/YYYY" type="text" />
+                <div class="form-title">Earliest Expiration Date</div>
+            </div>
+            <div class="input-form">
+                <input class="input-text" placeholder="0" type="text" />
+                <div class="form-title">Quantity</div>
+            </div>
+            <div class="input-form">
+                <input class="input-text" placeholder="0" type="text" />
+                <div class="form-title">Wholesale Price</div>
+            </div>
+            <div class="input-form">
+                <input class="input-text" placeholder="0" type="text" />
+                <div class="form-title">Retail Price</div>
+                <div class="logs-data">Created by: Admin 1 | December 29, 2023 at 9:00AM</div>
+                <div class="logs-data">Last update: Admin 1 | January 1, 2024 at 12:25 AM</div>
+            
+            </div>
+            <div class="cancel-add-button">
+                <button class="cancel">
+                    <img class="form-icon" alt="" src="x.svg" />
+                    <div class="text-label">Cancel</div>
+                </button>
+                <button class="save-product">
+                    <img class="form-icon" alt="" src="check.svg" />
+                    <div class="text-label">Save Changes</div>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- JAVASCRIPT FOR POP UPS -->
+
+    <script>
+        /** ADD FUNCTION POP UP **/
+        document.querySelector("#add-pop-up").addEventListener
+        ("click",function(){document.body.classList.add("active-inventory-add-item");});
+        document.querySelector(".inventory-add-item .cancel").addEventListener
+        ("click",function(){document.body.classList.remove("active-inventory-add-item");});
+        /** EDIT FUNCTION POP UP **/
+        document.querySelector("#edit-pop-up").addEventListener
+        ("click",function(){document.body.classList.add("active-inventory-edit-item");});
+        document.querySelector(".inventory-edit-item .cancel").addEventListener
+        ("click",function(){document.body.classList.remove("active-inventory-edit-item");});
+        /** OPENING FUNCTION **/
+        document.querySelector("#").addEventListener
+        ("click",function(){document.body.classList.add("active-inventory-edit-item");});
+    </script>
+
 </body>
 </html>
