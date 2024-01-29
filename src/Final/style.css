@@ -87,6 +87,17 @@ body {
 
 /* SIDE PANEL */
 
+.side-text.active, .side-text:hover, .side-text:active 
+{
+    font-size: 20px;
+    color: #000!important;
+    font-weight: bolder;
+}
+
+a {
+  text-decoration: none;
+}
+
 .side-text {
   position: relative;
   font-size: var(--font-size-xl);
@@ -394,16 +405,11 @@ body {
     padding-right: var(--padding-33xl);
     box-sizing: border-box;
   }
-  .inventory3 {
-    font-size: 38px;
-  }
+ 
   .tools {
     gap: 42px;
   }
   
-  .search {
-    gap: 39px;
-  }
   .content {
     padding-top: 65px;
     padding-bottom: 173px;
@@ -420,10 +426,7 @@ body {
   .filters-action {
     flex-wrap: wrap;
   }
-  .expiry-quantity-frame-parent {
-    flex-wrap: wrap;
-    min-width: 100%;
-  }
+ 
   .content {
     gap: 64px;
     padding-top: 42px;
@@ -433,21 +436,14 @@ body {
   }
 }
 @media screen and (max-width: 450px) {
-  .access-control,
-  .inventory2,
-  .invoice1,
-  .profile1 {
-    font-size: var(--font-size-base);
-  }
+ 
   .side-header {
     height: 561px;
   }
   .inventory3 {
     font-size: 29px;
   }
-  .sorts {
-    flex-wrap: wrap;
-  }
+  
   .tools {
     gap: var(--gap-2xl);
   }
